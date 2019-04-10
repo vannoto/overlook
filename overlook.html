@@ -1,22 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<meta charset="UTF-8">
-<title>Overlook</title>
-<link rel="stylesheet" type= text/css href="./overlook.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Overlook</title>
+    <link rel="stylesheet" type= text/css href="./overlook.css">
+</head>
      
+<body>
+    <div class="header">
+        <p>Signed: Vanessa Astronoto, Sruthi Kosuru
+            Date: <script> document.write(new Date().toLocaleDateString()); </script></p>
+        
+        <div class="register">
+            <button type="submit" value="Submit">Login</button>
+            <button type="reset" value="Submit">Sign Up</button>  
+        </div>
+    </div>
     
-    Date: <script> document.write(new Date().toLocaleDateString()); </script> 
-<button type="submit" value="Submit">Login</button>
-<button type="reset" value="Submit">Sign Up</button>
+    <div class="search">
+        <img src="overlook_logo.png" alt="logo" class="logo">
+        
+        <div class="searchbar">
+           <input type = "text" name = "search" placeholder = "Begin your search..."/>
+           <button id = "search" type="submit"><img src="search_icon.png"></button>
+        </div>
+    </div>
     
-    <h1> Overlook </h1> <br>
 
-<input type = "text" name = "search" />    
+    <div class="blurb">
+        <p>Don’t have the time to sift through all of the online thrift shops out there? We aim to make online thrift shopping just a little bit easier with this cross platform search engine.</p> 
+    </div>
     
+    <form action="./about.html">
+        <input type="submit" value="LEARN MORE"/>
+    </form>
 
-    <div class="blurb"><p> <em>Don’t have the time to sift through all of the online thrift shops out there? We aim to make online thrift shopping just a little bit easier with this cross platform search engine. <a href = "./about.html">LEARN MORE </a> </em> <br> </p> </div>
+    <div class="copy"> 
+       <p> Copyright Infringement &copy; Notice </p> 
+    </div>
+    
+    <script> 
+    
+    var search = document.getElementById('search'); 
+    search.addEventListener("click", openWin);
+        
+        
+    function openWin() {
+        myWindow = window.open("./results.html", "myWindow", "width=200,height=100");   // Opens a new window
+    }
 
-   <div class="copy"> 
-       <p> Copyright Infringement &copy; Notice </p> </div>
+    function closeWin() {
+        myWindow.close();   // Closes the new window
+    }
+    
+    </script>
 
+</body>
 </html>
