@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Form Validation </title>
+    <script type ="text/javascript" src = "./FormValidation.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "./FormValidation.css"/>
+</head>
+
+<body>
+    <form id = "textForm" method = "post" action = "http://www.cknuckles.com/cgi/echo.cgi" onsubmit = "return validate();" >
+    <table border = "0">
+    <tr>
+        <td><h3>Sign Up</h3>
+        <p>Your username and password must be 6-10 characters long and can only contain letters and digits.<br><br>
+        Your password must include at least one uppercase letter, lowercase letter, and digit.</p></td>
+    </tr>
+    <tr>
+        <td><input type = "text" name = "userName" placeholder = "Enter a username.."/></td>
+    </tr>
+    <tr>
+        <td><input type = "password" name = "password" placeholder = "Enter a password.."/></td>
+    </tr>
+    <tr>
+        <td><input type = "password" name = "password2" placeholder = "Repeat password.."/></td>
+    </tr>
+    <tr>
+        <td class="buttons">
+            <input type = "reset" value = "Clear" />
+            <input type = "submit" value = "Submit" />
+        </td>
+    </tr>
+
+    </table>
+    </form>
+</body>
+</html>
