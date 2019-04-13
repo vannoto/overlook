@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Overlook</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type= text/css href="./overlook.css">
+</head>
+     
+<body>
+    <div class="header">
+        
+        <div class="register">
+            <button type="submit" name = "login" value="Submit" onclick = "./login.html">Login</button>
+            <button type="reset" name = "signup" value="Submit" onclick = "./signup.html">Sign Up</button>  
+        </div>
+    </div>
+    
+    <div class="container">
+        <img src="overlook_logo.png" alt="logo" class="logo">
+        
+        <div class="searchbar">
+           <form  action="./results.html" method="get">
+               <input type = "text" name = "search" placeholder = "Begin your search..."/>
+           </form>
+        </div>
+    </div>
+    
+
+    <div class="blurb">
+        <p align="center">Don’t have the time to sift through all of the online thrift shops out there? We aim to make online thrift shopping just a little bit easier with this cross platform search engine.</p> 
+    </div>
+    
+    <form action="./about.html">
+        <input type="submit" value="LEARN MORE"/>
+    </form>
+
+    <div class="copy"> 
+       <p> Copyright Infringement &copy; Notice </p>
+       <p>Vanessa Astronoto, Sruthi Kosuru <br>
+            Last updated: <script> document.write(new Date().toLocaleDateString()); </script></p>
+    </div>
+    
+
+</body>
+</html>
