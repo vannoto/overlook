@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Overlook</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type= text/css href="./overlook.css">
+    <link rel="stylesheet" href="./results.css">
+    <script type = "text/javascript" src = "./results.js"></script>
+</head>  
+    <div class="header"> 
+        <div class="register">
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>  
+        </div>
+    </div>
+  
+   <body onload="displayResults()">
+        <div id="nav">
+            <a href="./overlook.html"><img src="overlook_logo.png" alt="logo" class="logo" height="40px"></a>
+            <div class="options">
+                <a href = "#">View favorites</a><br><br>
+                <form>
+                    <p>Sort by vendor:</p>
+                    <input type="checkbox" name="Depop" id="option1">
+                    <label for="option1">Depop</label><br>
+                    <input type="checkbox" name="Poshmark" id="option2">
+                    <label for="option2">Poshmark</label><br>
+                    <input type="checkbox" name="ThredUp" id="option3">
+                    <label for="option3">ThredUp</label><br>
+                </form>
+            </div>
+        </div>
+        
+        <div class="searchbar">
+           <form>
+               <input type = "text" name = "search" placeholder = "Begin your search..."/>
+           </form>
+        </div>
+
+        <div id="results">
+        </div>
+    </body>
+
+    
+</html>

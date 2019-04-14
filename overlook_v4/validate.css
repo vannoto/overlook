@@ -1,0 +1,48 @@
+html {
+    background-color: whitesmoke; 
+}
+
+h1 {
+    text-align: center; 
+    padding-top: 30px;
+    padding-bottom: 30px; 
+    font-size: 30px; 
+    letter-spacing: 5px; 
+    border-bottom: 1px solid black; 
+}
+
+p {
+    text-align: center; 
+    font-size: 15px; 
+    margin-bottom: -50px; 
+}
+
+table {
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 10%; 
+    font-size: 20px; 
+    font-family: sans-serif; 
+}
+
+input{
+  width: 250px; 
+  height: 25px; 
+}
+
+tr.spaceUnder>td {
+  padding-bottom: 50px;
+}
+
+
+input[type = "submit"] {
+    height: 40px; 
+    width: 80px; 
+    background-color: antiquewhite;  
+}
+
+input[type = "reset"] {
+    height: 40px; 
+    width: 80px; 
+    background-color: cadetblue;  
+}
