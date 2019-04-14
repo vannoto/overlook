@@ -1,9 +1,15 @@
+html {
+    max-width: 100%; 
+    max-height: 100%; 
+}
+
 body {
     background-color: white; 
 }
 
 .register {
-    margin-top: 15px;
+    margin-right: 20px; 
+    margin-top: 60px;
     float: right;
 }
 
@@ -25,6 +31,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -40px;  
 }
 
 .container {
@@ -112,3 +119,7 @@ form input[type="submit"]:hover {
     margin-right: auto;
 }
 
+a {
+    color: deeppink;
+    margin-right: 12px; 
+}

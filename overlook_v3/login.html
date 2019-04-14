@@ -3,15 +3,15 @@
 <html>
 <head>
     <title> Login </title>
-    <script type ="text/javascript" src = "./overlook.js"></script>
-    <!--link rel = "stylesheet" type = "text/css" href = "./FormValidation.css"/-->
+    <link rel = "stylesheet" type = "text/css" href = "./login.css">
 </head>
 
 <body>
-    <form id = "textForm" method = "post" action = "#" onsubmit = "note.php" >
+    <form id = "textForm" method = "get"
+ action = "#" onsubmit = "return validate();">
     <table border = "0">
     <tr>
-        <td><h3>Sign Up</h3>
+        <td><h3>Sign In</h3>
         <p>Login with your username and password below.<br><br>
         </p></td>
     </tr>
@@ -22,9 +22,6 @@
         <td><input type = "password" name = "password" placeholder = "Enter a password.."/></td>
     </tr>
     <tr>
-        <td><input type = "password" name = "repeat" placeholder = "Repeat password.."/></td>
-    </tr>
-    <tr>
         <td class="buttons">
             <input type = "reset" value = "Clear" />
             <input type = "submit" value = "Submit" />
@@ -33,5 +30,6 @@
 
     </table>
     </form>
+      <script type ="text/javascript" src = "./login.js"></script>
 </body>
 </html>
