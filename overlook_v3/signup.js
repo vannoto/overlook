@@ -3,7 +3,7 @@ document.getElementById("textForm").onsubmit = validate;
   {
     var elt = document.getElementById("textForm");
       
-    if (elt.userName.value == "")
+    if (elt.username.value == "")
     {
       window.alert ("Invalid Input: Enter name");
       return false;
@@ -22,19 +22,19 @@ document.getElementById("textForm").onsubmit = validate;
     }
       
     //condition 1: The user name must be between 6 and 10 characters long
-    if (elt.userName.value.length < 6 | elt.userName.value.length > 10) {
-        window.alert("Invalid Input: userName must be between 6 and 10 characters long"); 
+    if (elt.username.value.length < 6 | elt.username.value.length > 10) {
+        window.alert("Invalid Input: username must be between 6 and 10 characters long"); 
         return false; 
     }
     //condition 2: The user name must contain only letters and digits
-    if (elt.userName.value.match(/\W/) != null) {
-        window.alert ("Invalid Input: userName must contain only letters and digits."); 
-        console.log(elt.userName.value.match(/[^a-zA-Z0-9_]/)); 
+    if (elt.username.value.match(/\W/) != null) {
+        window.alert ("Invalid Input: username must contain only letters and digits."); 
+        console.log(elt.username.value.match(/[^a-zA-Z0-9_]/)); 
         return false; 
     }
     //condition 3: The user name cannot begin with a digit
-    if (elt.userName.value.match(/^[^0-9]/) == null) {
-        window.alert ("Invalid Input: userName cannot begin with a digit."); 
+    if (elt.username.value.match(/^[^0-9]/) == null) {
+        window.alert ("Invalid Input: username cannot begin with a digit."); 
         return false; 
     }
       
