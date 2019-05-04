@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html> 
+<head>
+    <title> Registration</title>
+    <link rel = "stylesheet" type = "text/css" href = "./login.css">
+    <script type ="text/javascript" src = "./signup.js"></script>
+</head>
+
+<body>
+    <form id = "textForm" method = "#" action = "#">
+    <table border = "0">
+    <tr>
+        <td><h3>Sign Up</h3>
+        <p>Your username and password must be 6-10 characters long and can only contain letters and digits.<br><br>
+        Your password must include at least one uppercase letter, lowercase letter, and digit.</p></td>
+    </tr>
+    <tr>
+        <td><input type = "text" name = "userName" placeholder = "Enter a username..." onblur = "checkUserBlank();"/></td>
+    </tr>
+    <tr>
+        <td><input type = "password" name = "password" placeholder = "Enter a password..." onblur = "checkPassBlank();"/></td>
+    </tr>
+    <tr>
+        <td><input type = "password" name = "repeat" placeholder = "Repeat password..." onblur = "checkRepeatBlank();"/></td>
+    </tr>
+    <tr>
+        <td class="buttons">
+            <input type = "reset" value = "Clear" />
+            <input type = "submit" value = "Submit" onclick = "validate()"/>
+        </td>
+    </tr>
+    </table>
+    <div class="redirect"> 
+        <p>Already have an account? <a href="./login.html">Login.</a></p>
+        <a href="./overlook.html">Go back</a>
+    </div>
+    </form>
+</body>
+</html>
