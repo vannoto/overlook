@@ -47,11 +47,12 @@ print <<<TOP
     <title>Overlook</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./results.css">
+    <script src="./func.js"></script>
     </head>  
     <div class="header"> 
         <div class="register">
-            <a href="login.html">Login/Logout</a>
-            <a href="signup.html">Sign Up</a>  
+            <a href="./redirect.php">Login/Logout</a>
+            <a href="./signup.html">Sign Up</a>  
         </div>
     </div>
   
@@ -59,7 +60,7 @@ print <<<TOP
         <div id="nav">
             <a href="./overlook.html"><img src="overlook_logo.png" alt="logo" class="logo" height="40px"></a>
             <div class="options">
-                <a href = "./favorites.html">View favorites</a><br><br>
+                <a href = "./favorites.php">View favorites</a><br><br>
                 <form>
                     <p>Sort by vendor:</p>
                     <input type="checkbox" name="Depop" id="option1">
@@ -98,7 +99,7 @@ else
       print ("<tr>");
    }
 
-   $container = '<div id="container"><a href="' . $row[3] . '"> <img id="result_img" src="' . $row[4] . '" width="180" height= "180" alt="result"><p>' . $row[0] . '</p></a><p><b>' . $row[1] . '</b> | $' . $row[2] . '</p><button type=button id="fav">Add to Favorites</button><br></div>';
+   $container = '<div id="container"><a href="' . $row[3] . '" target="_blank"> <img id="result_img" src="' . $row[4] . '" width="180" height= "180" alt="result"><p>' . $row[0] . '</p></a><p><b>' . $row[1] . '</b> | $' . $row[2] . '</p><button type=button id="fav">Add to Favorites</button><br></div>';
 
    print ("<td width='180'>" . $container . "</td>");
 
@@ -112,7 +113,8 @@ else
 
 print <<<BOTTOM
         </table>
-        </div>
+	</div>
+	<button onclick="topFunction()" id="top" title="Go to top">Back to Top <img width='20' src ="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-512.png"></button>
     </body>
 </html>
 

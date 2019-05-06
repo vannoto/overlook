@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+if ($_SESSION['userid'] == null) {
+    header('Location: ./login.html');
+    exit;
+}
+
+print <<<FAVES
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,3 +39,7 @@
 
 
 </html>
+
+FAVES;
+
+?>
