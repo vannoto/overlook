@@ -186,7 +186,7 @@ button[type="button"]:focus {
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
+  padding-top: 15px;
   font-family: sans-serif;
   font-size: 15px;
   text-align: right;
