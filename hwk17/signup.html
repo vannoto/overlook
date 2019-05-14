@@ -1,0 +1,29 @@
+<html> 
+<head>
+    <title> Registration</title>
+    <script type = "text/javascript" src = "./checkUser.js"></script>
+</head>
+
+<body>
+    <form id = "textForm" method = "post" action = "./register.php">
+    <table border = "0">
+    <tr>
+	<td><h2>Sign Up</h2>
+        <p>Enter a username and password below.</p></td>
+    </tr>
+    <tr>
+        <td><input type = "text" name = "username" id = "username" placeholder = "Enter a username.." onchange = "callServer();"></td>
+    </tr>
+    <tr>
+        <td><input type = "password" name = "password" ide = "password" placeholder = "Enter a password.."/></td>
+    </tr>
+    <tr>
+        <td class="buttons">
+            <input type = "reset" value = "Reset" />
+            <input type = "submit" value = "Submit" />
+        </td>
+    </tr>
+    </table>
+    </form>
+</body>
+</html>
