@@ -20,23 +20,100 @@ if(empty($connect))
 $searchterm = mysqli_real_escape_string ($connect, $_POST["search"]);
 $searchterm = explode(" ", $searchterm);
 
+$filters = array();
+if (isset($_POST["Depop"])){
+  array_push($filters, "Depop");
+}
+if (isset($_POST["Poshmark"])){
+  array_push($filters, "Poshmark");
+}
+if (isset($_POST["Mercari"])){
+  array_push($filters, "Mercari");
+}
+if (isset($_POST["ThredUp"])){
+  array_push($filters, "ThredUp");
+}
+
 $table = "inventory";
 
-// max number of words in search is 5, rest is cut off
-if (count($searchterm) == 1){
-    $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%'"); 
+// if no filters or all filters are selected, show all results
+if (count($filters) == 0 OR count($filters) == 4){
+  // max number of words in search is 5, rest is cut off
+  if (count($searchterm) == 1){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%'"); 
+  }
+  else if (count($searchterm) == 2){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%'"); 
+  }
+  else if (count($searchterm) == 3){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%'");
+  }
+  else if (count($searchterm) == 4){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%$searchterm[3]%'");
+  }
+  else if (count($searchterm) == 5){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%$searchterm[3]%$searchterm[4]%'");
+  }
 }
-else if (count($searchterm) == 2){
-    $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%'"); 
+
+// if one filter is selected
+if (count($filters) == 1){
+  // max number of words in search is 5, rest is cut off
+  if (count($searchterm) == 1){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%' AND LOCATION='$filters[0]'");
+  }
+  else if (count($searchterm) == 2){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%' AND LOCATION='$filters[0]'");
+  }
+  else if (count($searchterm) == 3){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%' AND LOCATION='$filters[0]'");
+  }
+  else if (count($searchterm) == 4){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%$searchterm[3]%' AND LOCATION='$filters[0]'");
+  }
+  else if (count($searchterm) == 5){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%$searchterm[3]%$searchterm[4]%' AND LOCATION='$filters[0]'");
+  }
+} 
+
+// if two filters are selected
+if (count($filters) == 2){
+  // max number of words in search is 5, rest is cut off
+  if (count($searchterm) == 1){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%' AND (LOCATION='$filters[0]' OR LOCATION='$filters[1]')");
+  }
+  else if (count($searchterm) == 2){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%' AND (LOCATION='$filters[0]' OR LOCATION='$filters[1]')");
+  }
+  else if (count($searchterm) == 3){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%' AND (LOCATION='$filters[0]' OR LOCATION='$filters[1]')");
+  }
+  else if (count($searchterm) == 4){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%$searchterm[3]%' AND (LOCATION='$filters[0]' OR LOCATION='$filters[1]')");
+  }
+  else if (count($searchterm) == 5){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%$searchterm[3]%$searchterm[4]%' AND (LOCATION='$filters[0]' OR LOCATION='$filters[1]')");
+  }
 }
-else if (count($searchterm) == 3){
-    $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%'");
-}
-else if (count($searchterm) == 4){
-    $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%$searchterm[3]%'");
-}
-else if (count($searchterm) == 5){
-    $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%$searchterm[3]%$searchterm[4]%'");
+
+// if three filters are selected
+if (count($filters) == 3){
+  // max number of words in search is 5, rest is cut off
+  if (count($searchterm) == 1){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%' AND (LOCATION='$filters[0]' OR LOCATION='$filters[1]' OR LOCATION='$filters[2]')");
+  }
+  else if (count($searchterm) == 2){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%' AND (LOCATION='$filters[0]' OR LOCATION='$filters[1]' OR LOCATION='$filters[2]')");
+  }
+  else if (count($searchterm) == 3){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%' AND (LOCATION='$filters[0]' OR LOCATION='$filters[1]' OR LOCATION='$filters[2]')");
+  }
+  else if (count($searchterm) == 4){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%$searchterm[3]%' AND (LOCATION='$filters[0]' OR LOCATION='$filters[1]' OR LOCATION='$filters[2]')");
+  }
+  else if (count($searchterm) == 5){
+      $result = mysqli_query ($connect, "SELECT * FROM $table WHERE NAME LIKE '%$searchterm[0]%$searchterm[1]%$searchterm[2]%$searchterm[3]%$searchterm[4]%' AND (LOCATION='$filters[0]' OR LOCATION='$filters[1]' OR LOCATION='$filters[2]')");
+  }
 }
 
 $script = $_SERVER['PHP_SELF'];
@@ -73,7 +150,7 @@ print <<<TOP
 		    <input type="checkbox" name="Mercari" id="option3">
                     <label for="option3">Mercari</label><br>
                     <input type="checkbox" name="ThredUp" id="option4">
-		    <label for="option4">ThredUp</label><br><br>
+		    <label for="option4">ThredUp</label><br>
 		    <input type="submit" id = "applyFilter" value = "Search">
             </div>
         </div>

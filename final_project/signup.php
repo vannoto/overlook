@@ -201,7 +201,8 @@ else {
                 font-family: sans-serif;
                 color: #262730;
                 letter-spacing: 1px;
-                font-size: small;
+		font-size: small;
+		text-align: center;
             }
 
             a {
@@ -294,8 +295,9 @@ else {
         </style>
     </head>
     <body> <form>
+    <br><br>
     <h1> Invalid Sign Up Attempt. </h1>
-    <h1> <a href = "./signup.html">Re-register</a> </h1> </form>
+    <p>Username is already taken. Click <a href = "./signup.html">here</a> to try again.</p><br><br></form>
     </body>
     </html>
 NOTSAVED;

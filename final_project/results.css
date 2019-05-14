@@ -189,6 +189,8 @@ button[type="button"]:focus {
   padding: 15px; /* Some padding */
   font-family: sans-serif;
   font-size: 15px;
+  text-align: right;
+  color: #ea5c5c;
 }
 
 #applyFilter:focus {
@@ -196,5 +198,5 @@ button[type="button"]:focus {
 }
 
 #applyFilter:hover {
-  color: #ea5c5c;
+  color: black;
 }
