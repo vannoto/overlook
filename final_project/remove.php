@@ -28,7 +28,7 @@ if(empty($connect))
 // delete item from favorites table
 $fav_table = 'favorites';
 
-mysqli_query($connect, "DELETE FROM $table WHERE ITEM_ID='$ITEM_ID' AND USER_ID='$username'");
+mysqli_query($connect, "DELETE FROM $fav_table WHERE ITEM_ID='$ITEM_ID' AND USER_ID='$username'");
 
 echo($ITEM_ID);
 
