@@ -38,10 +38,9 @@ function changeButton(){
         var response = xhr.responseText;
         if (response != ""){
           curr_button.innerHTML = "Removed";
-          curr_button.style.background = "#f48983";
-          curr_button.style.color = "white";
+          //curr_button.style.background = "#f48983";
+          //curr_button.style.color = "white";
           curr_button.disabled = true;
-          //document.getElementsByClassName(response).setAttribute("onclick", "javascript: Remove();");
         }
     }
 }

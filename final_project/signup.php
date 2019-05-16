@@ -296,7 +296,7 @@ else {
     </head>
     <body> <form>
     <br><br>
-    <h1> Invalid Sign Up Attempt. </h1>
+    <h1> Invalid Sign Up Attempt</h1>
     <p>Username is already taken. Click <a href = "./signup.html">here</a> to try again.</p><br><br></form>
     </body>
     </html>

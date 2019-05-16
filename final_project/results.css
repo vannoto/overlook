@@ -1,6 +1,6 @@
 .register {
     margin-right: 20px; 
-    margin-top: 5px;
+    margin-top: 20px;
     font-family: sans-serif;
     float: right;
 }
@@ -63,9 +63,10 @@ a:hover {
 }
 
 #results {
-    margin-top: 30px;
-    margin-left: 400px;
-    margin-bottom: 30px;
+    position: absolute;
+    top: 150px;
+    left: 400px;
+    bottom: 30px;
     width: 800px;
 }
 
@@ -103,7 +104,7 @@ a:hover {
     font-family: sans-serif;
 }
 
-button[type="button"]:hover {
+#fav:hover {
     background-color: #f48983;
     color: white;
     font-size: 12px;
@@ -116,7 +117,7 @@ button[type="button"]:hover {
     margin-bottom: 10px;
 }
 
-button[type="button"] {
+#fav {
     background-color: white;
     color: #f48983;
     font-size: 12px;
@@ -129,15 +130,57 @@ button[type="button"] {
     margin-bottom: 10px;
 }
 
+#remove {
+    background-color: #f48983;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
 button[type="button"]:focus {
     outline: none;
 }
 
+button[type="submit"]:hover {
+    background-color: #f48983;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: white;
+    color: #f48983;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 130px;
+    height: 30px;
+    border: 1px solid #f48983;
+    border-radius: 20px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"]:focus {
+    outline: none;
+}
+
 .searchbar input[type="text"] {
-    float: left;
-    margin-left: 200px;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    position: absolute;
+    left: 500px;
+    top: 80px;
     width: 600px;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -186,8 +229,8 @@ button[type="button"]:focus {
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding-top: 15px;
   font-family: sans-serif;
+  padding-top: 15px;
   font-size: 15px;
   text-align: right;
   color: #ea5c5c;

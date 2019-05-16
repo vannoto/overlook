@@ -35,7 +35,7 @@ $fav_table = 'favorites';
 
 // first, check if favorite already exists
 //$check_item = mysqli_query ($connect, "SELECT * FROM $fav_table WHERE ITEM_ID = '$ITEM_ID' AND USER_ID = '$username'");
-//if (!empty($result)){
+//if (!empty($check_item)){
 //  echo ("taken");
 //  exit;
 //}

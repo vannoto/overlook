@@ -71,7 +71,7 @@ else
       print ("<tr>");
    }
 
-   $container = '<div id="container"><a href="' . $row[4] . '" target="_blank"> <img id="result_img" src="' . $row[5] . '" width="180" height= "180" alt="result"><p>' . $row[1] . '</p></a><p><b>' . $row[2] . '</b> | $' . $row[3] . '</p><form id = "fav_button" method = "post"><button type=button onClick = "removeFave(this)" id="remove" class="' . $row[0] . '" name="' . $row[0] . '" value="' . $row[0] . '">Remove</button></form></div>';
+   $container = '<div id="container"><a href="' . $row[4] . '" target="_blank"> <img id="result_img" src="' . $row[5] . '" width="180" height= "180" alt="result"><p>' . $row[1] . '</p></a><p><b>' . $row[2] . '</b> | $' . $row[3] . '</p><form id = "fav_button" method = "post"><button type=submit onClick = "removeFave(this)" id="remove" class="' . $row[0] . '" name="' . $row[0] . '" value="' . $row[0] . '">Remove</button></form></div>';
 
    print ("<td width='180'>" . $container . "</td>");
 

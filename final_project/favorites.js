@@ -39,8 +39,8 @@ function updatePage(){
 	if (response == "not logged in"){
 	  window.alert('You must log in to add this item to your favorites.');
 	}
-	else if (response == "taken"){
-	  window.alert('This item is already in your favorites.');
+	//else if (response == "taken"){
+	//  window.alert('This item is already in your favorites.');
 	}
 	else if (response != "taken" && response != ""){
 	  curr_button.innerHTML = "Added!";
