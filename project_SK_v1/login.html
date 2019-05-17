@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <title> Login </title>
+    <link rel = "stylesheet" type = "text/css" href = "./login.css">
+    <script src = "./login.js"></script>
+</head>
+
+<body>
+    <form id = "textForm" method = "post" action = "./login.php">
+    <table>
+    <tr>
+        <td><h3>Log In</h3>
+        <p>Log in with your username and password below.<br>
+        </p></td>
+    </tr>
+    <tr>
+        <td><input type = "text" name = "username" placeholder = "Enter a username..." onblur = "checkUserBlank();"/></td>
+    </tr>
+    <tr>
+        <td><input type = "password" name = "password" placeholder = "Enter a password..." onblur = "checkPassBlank();"/></td>
+    </tr>
+    <tr>
+        <td class="buttons">
+            <input type = "reset" value = "Clear" />
+            <input type = "submit" value = "Submit" onclick = "validate()"/>
+        </td>
+        </tr>
+    </table>
+    <div class="redirect"> 
+        <p>Don't have an account? <a href="./signup.html">Register.</a></p>
+        <a href="./overlook.html">Continue without an account.</a>
+    </div>
+    </form>
+</body>
+</html>
