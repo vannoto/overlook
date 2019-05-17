@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang='en'> 
+<head>
+    <meta charset="UTF-8">
+    <title> Registration</title>
+    <script src = "./signup.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "./login.css">
+</head>
+
+<body>
+    <form id = "textForm" method = "post" action = "signup.php">
+    <table>
+    <tr>
+        <td><h3>Sign Up</h3>
+        <p>Your username and password must be 6-10 characters long and can only contain letters and digits.<br><br>
+        Your password must include at least one uppercase letter, lowercase letter, and digit.</p></td>
+    </tr>
+    <tr>
+        <td><input type = "text" name = "username" id = "username" placeholder = "Enter a username.." onchange = "callServer();" onblur = "checkUserBlank();"/></td>
+    </tr>
+    <tr>
+        <td><input type = "password" name = "password" id="password" placeholder = "Enter a password..." onblur = "checkPassBlank();"/></td>
+    </tr>
+    <tr>
+        <td><input type = "password" name = "repeat" id = "repeat" placeholder = "Repeat password..." onblur = "checkRepeatBlank();"/></td>
+    </tr>
+    <tr>
+        <td class="buttons">
+            <input type = "reset" value = "Clear" />
+            <input type = "submit" value = "Submit" onclick = "validate();"/>
+        </td>
+    </tr>
+    </table>
+    <div class="redirect"> 
+        <p>Already have an account? <a href="./login.html">Login.</a></p>
+        <a href="./overlook.html">Continue without an account.</a>
+    </div>
+    </form>
+</body>
+</html>

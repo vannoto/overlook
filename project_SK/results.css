@@ -1,0 +1,245 @@
+.register {
+    margin-right: 20px; 
+    margin-top: 20px;
+    font-family: sans-serif;
+    float: right;
+}
+
+.register a {
+    cursor: pointer;
+    text-decoration: none;
+    color: dimgray;
+    font-size: 14px;
+    margin-right: 12px; 
+}
+
+.register a:hover {
+    color: #ea5c5c;
+}
+
+#nav {
+    margin-top: 60px;
+    width: 300px;
+    text-align: right;
+    float: left;
+}
+
+#nav .options {
+    margin-top: 50px;
+}
+
+#nav p {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: black;
+}
+
+#nav label {
+  font-family: sans-serif;
+  font-size: 14px;
+  display: inline-block;
+  padding-right: 15px;
+  vertical-align: top;
+  
+}
+
+input[type="checkbox"] {
+  float: right;
+  cursor: pointer;
+}
+
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ea5c5c;
+}
+
+#results {
+    position: absolute;
+    top: 150px;
+    left: 400px;
+    bottom: 30px;
+    width: 800px;
+}
+
+#result_img{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-bottom: 10px;
+}
+
+#result_img:hover{
+    cursor: pointer;
+}
+
+#container {
+    background: white;
+    border-radius: 8px;
+    padding-bottom: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    margin: 15px;
+}
+
+#container:hover {
+    animation: pulse 0.5s forwards;
+}
+
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+#container p {
+    margin-left: 10px;
+    width: 160px;
+    font-family: sans-serif;
+}
+
+#fav:hover {
+    background-color: #f48983;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+#fav {
+    background-color: white;
+    color: #f48983;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 130px;
+    height: 30px;
+    border: 1px solid #f48983;
+    border-radius: 20px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+#remove {
+    background-color: #f48983;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+button[type="button"]:focus {
+    outline: none;
+}
+
+button[type="submit"]:hover {
+    background-color: #f48983;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: white;
+    color: #f48983;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 130px;
+    height: 30px;
+    border: 1px solid #f48983;
+    border-radius: 20px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"]:focus {
+    outline: none;
+}
+
+.searchbar input[type="text"] {
+    position: absolute;
+    left: 500px;
+    top: 80px;
+    width: 600px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 45px;
+    padding-left: 20px;
+    border: 1px solid #302e2e;
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+    background-image:url('search_icon.png');
+    background-repeat: no-repeat;
+    background-position: 555px center;
+    background-size: 25px;
+    outline: 0;
+}
+
+.searchbar input[type="text"]:focus {
+    outline: none;
+}
+
+#top {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 30px;
+  left: 190px;
+  z-index: 99; /* Make sure it does not overlap */
+  background-color: Transparent;
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+#top:focus {
+  outline: none;
+}
+
+#top:hover {
+  color: #ea5c5c;
+}
+
+#applyFilter {
+  background-color: Transparent;
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  font-family: sans-serif;
+  padding-top: 15px;
+  font-size: 15px;
+  text-align: right;
+  color: #ea5c5c;
+}
+
+#applyFilter:focus {
+  outline: none;
+}
+
+#applyFilter:hover {
+  color: black;
+}
