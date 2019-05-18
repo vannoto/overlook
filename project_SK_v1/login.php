@@ -16,6 +16,11 @@ extract($_POST);
     
     $passWord = trim($_POST['password']); 
 
+    checkFile($userName, $passWord); 
+
+    function checkFile($userName, $passWord) {
+
+
     $uNames = array(); 
     $pNames = array ();
 
@@ -28,19 +33,26 @@ extract($_POST);
         //array_push($pNames, trim($str[1])); 
         if ((crypt($passWord,trim($str[1])) == trim($str[1]) and ((in_array(trim($userName), $uNames))))) {
             //break;
-            redirect(); 
-            //break;
-        }
-        else {
-            //break;
-            loginInvalid();
+            //redirect(); 
+            return true; 
             //break;
         }
     }
+        
     fclose($myfile); 
+    }
 
-    $passWord = trim($passWord); 
-    $passWord = crypt($passWord); 
+    //$passWord = trim($passWord); 
+    //$passWord = crypt($passWord); 
+
+    $check = checkFile($userName, $passWord);
+
+    if ($check ==  true|| $check == 'true') {
+        redirect(); 
+    }
+    else {
+        loginInvalid(); 
+    }
 
 /*if ((in_array(trim($userName), $uNames)))  
     //(crypt($passWord,trim($str[1])) == $crypted_pass)
