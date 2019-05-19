@@ -9,6 +9,10 @@ function validate (){
     if (elt.password.value == ""){
       window.alert ("Please enter a password.");
     }
+    
+    var sha256 = new jsSHA('SHA-256', 'TEXT');
+    sha256.update(password); 
+    var hash = sha256.getHash("HEX");
   }
 
 function checkUserBlank (){
