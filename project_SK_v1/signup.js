@@ -103,11 +103,21 @@ function validate (){
           return false; 
     }
       
-    var sha256 = new jsSHA('SHA-256', 'TEXT');
-    sha256.update(password); 
-    var hash = sha256.getHash("HEX");
     return true;
   }
+
+function SHA256(s){
+
+    var characters  = 8;
+    var hexcase = 0;
+
+    function crypt_add (x, y) {
+        var i = (x & 0xFFFF) + (y & 0xFFFF);
+        var j = (x >> 16) + (y >> 16) + (i >> 16);
+        return (j << 16) | (i & 0xFFFF);
+
+    }
+}
 
 function checkUserBlank (){
     var elt = document.getElementById("textForm");  
