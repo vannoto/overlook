@@ -103,6 +103,9 @@ function validate (){
           return false; 
     }
       
+    var sha256 = new jsSHA('SHA-256', 'TEXT');
+    sha256.update(password); 
+    var hash = sha256.getHash("HEX");
     return true;
   }
 
